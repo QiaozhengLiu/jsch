@@ -1,0 +1,18 @@
+plugins {
+    id 'java-library'
+}
+
+group=_groupId
+version=_version
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+dependencies {
+    implementation 'com.jcraft:jzlib'
+    constraints {
+        implementation('com.jcraft:jzlib:1.0.7')
+    }
+}
+
+apply from: file('../gradle/publish.gradle')
